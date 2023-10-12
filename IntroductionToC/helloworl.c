@@ -2,7 +2,7 @@
 // Run: ./helloworld
 #include <stdio.h>
 
-c
+
 int main()
 {
     // Print "Hello World!" to the console
