@@ -19,6 +19,7 @@ int main(){
     } else {
         printf("Eres menor de edad\n");
     }
+    imprimir_dia(2);
     return 0;
 }
 
@@ -27,3 +28,50 @@ int main(){
 // && : AND
 // || : OR
 //* !  : NOT
+
+// Operadores de comparación
+// == : Igual
+// != : Diferente
+// >  : Mayor que
+// <  : Menor que
+// >= : Mayo o igual que
+// <= : Menos o igual que
+
+// * SWITCH :
+// The switch statement allows you to execute a block of code among many alternatives.
+// SINTAX:
+// switch(expression) {
+//   case constant-expression  :
+//     statement(s);
+//     break; // optional
+
+void imprimir_dia(int dia ){
+    switch (dia)
+    {
+    case 1:
+        printf("Lunes\n");
+        break;
+    case 2:
+        printf("Martes\n");
+        break;
+    case 3: 
+        printf("Miercoles\n");
+        break;
+    case 4:
+        printf("Jueves\n");
+        break;
+    case 5:
+        printf("Viernes\n");
+        break;
+    case 6: 
+        printf("Sabado\n");
+        break;
+    case 7:
+        printf("Domingo\n");
+        break;
+    default:
+        printf("Dia invalido\n");
+        break;
+    }
+}
+
