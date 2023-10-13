@@ -22,3 +22,20 @@ int main(){
   return 0;
   
 }
+
+// Ejemplo de inline inicialization de un array: 
+// int edades[5] = {10, 20, 30, 40, 50};
+
+// VLA
+// 1. VLA stands for Variable Length Array.
+// 2. VLA is a type of array whose length is determined at run time.
+// 3. VLA is a feature introduced in C99 standard.
+// 4. VLA is allocated on stack.
+// 5. VLA is allocated memory at run time.
+// Example:
+// int n;
+// scanf("%d", &n);
+// int arr[n]; // VLA
+
+// los identificadores de un array no identifican al array como tal sino que identifican punteros, es decir, apunta a la dirección de memoria de los elementos del array
+
