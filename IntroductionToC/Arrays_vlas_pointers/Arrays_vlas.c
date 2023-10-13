@@ -4,10 +4,23 @@
 // 3. Arrays can be of two types: one-dimensional and multi-dimensional.
 
 #include <stdio.h>
+float media(int* edades, int tam){
+  int suma = 0;
+  for (int i = 0; i < tam; i++)
+  {
+    suma += edades[i];
+  }
+  return (float)suma/tam;
+}
 
 int main(){
-  int edades[8];
-  for (int i=0; i<8 ; i++){
+  int tam;
+  printf("Introduce el número de edades a ingresar: ");
+  scanf("%d", &tam);
+
+  int i, edades[tam];
+  for (int i=0; i<tam ; i++){
+
     printf("Introduce la edad de la persona %d: ", i+1);
 
     // La función scanf() en C se utiliza para leer datos de la entrada estándar (stdin) y almacenarlos en variables.
@@ -15,13 +28,15 @@ int main(){
     // La función scanf() toma una cadena de formato como su primer argumento, y un puntero a la primera variable a la que se le asignará un valor como su segundo argumento. La cadena de formato especifica el tipo de datos de cada variable a la que se le asignará un valor.
     scanf("%d", &edades[i]);
   }
-  for (int i = 0; i < 8; i++)
+  for (int i = 0; i < tam; i++)
   {
     printf("La edad de la persona %d es %d\n", i+1, edades[i]);
   }
+  printf("La media de las edades es: %.2f\n", media(edades, tam));
   return 0;
   
 }
+
 
 // Ejemplo de inline inicialization de un array: 
 // int edades[5] = {10, 20, 30, 40, 50};
