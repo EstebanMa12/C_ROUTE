@@ -23,10 +23,6 @@ void jugar(int* n){
 
   // Se asigna el nuevo valor al puntero
   *n = y;
-
-  // Se imprime el valor del puntero
-  printf("%d\n", y);
-
 }
 
 
@@ -52,7 +48,7 @@ int main() {
 
   // Print the value that ptr is pointing to
   printf("Value that *ptr ins pointing to: %d\n", *ptr);
-
+  printf("-----------------------------------------\n");
   printf("Jugando con el número: \n");
   jugar(&num);
   printf("Value of num: %d\n", num);
