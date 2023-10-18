@@ -19,6 +19,7 @@
 // Los archivos de cabecera se incluyen en un programa usando la directiva #include.
 
 #include "empleados.h"
+#include "sueldos.h"
 
 
 
@@ -29,6 +30,7 @@ int main(){
   strncpy(e.identificador, "12345678",9);
   e.cargo = ANALISTA;
   print_empleado(&e);
+  pagar_sueldos(&e);
   return 0;
 }
 
