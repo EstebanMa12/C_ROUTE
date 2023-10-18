@@ -20,3 +20,7 @@ int main(){
 
 // gcc -o hello hello.o --> la bandera -o sirve para cambiar el nombre al ejecutable 
 
+// * Es por esta razon que se deben compilar los archivos con gcc en vscode para que se pueda crear un ejecutable 
+
+
+
