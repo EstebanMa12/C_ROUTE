@@ -19,7 +19,6 @@ int i;
   printf("Array: ");
   imprimir(array, ptr_size_array);
   printf("\n");
-
   eliminar_en_i(array, ptr_size_array, 3);
   eliminar_final(array, ptr_size_array);
   eliminar_inicio(array, ptr_size_array);
