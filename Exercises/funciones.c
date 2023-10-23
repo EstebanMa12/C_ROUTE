@@ -63,5 +63,22 @@ void imprimir_pointer(int *array, int *prt_size_array){
   printf("\n");
 }
 int buscar(int *array, int *prt_size_array, int valor ){
-  
+  int i =0; 
+  while (i < *prt_size_array)
+  {
+    if(array[i]==valor){
+      return i;
+    }
+    i++;
+  }
+  return -1;
+}
+int buscar2(int *array, int *prt_size_array, int valor ){
+  int i ; 
+  for(i=0; i<*prt_size_array; i++){
+    if(array[i]==valor){
+      return i;
+    }
+  }
+  return -1;
 }

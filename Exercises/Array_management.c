@@ -26,6 +26,6 @@ int i;
   printf("Array: ");
   imprimir(array, ptr_size_array);
   printf("\n");
-
+  printf("El número %d esta en la posición %d",4, buscar(array,ptr_size_array,4));
   return 0;
 }
