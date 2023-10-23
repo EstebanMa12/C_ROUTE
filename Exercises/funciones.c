@@ -81,4 +81,5 @@ int buscar2(int *array, int *prt_size_array, int valor ){
     }
   }
   return -1;
+  
 }
