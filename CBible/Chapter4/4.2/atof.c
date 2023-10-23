@@ -1,5 +1,7 @@
 #include <ctype.h>
 
+// atof: convert string s to double
+
 double atof(char s[]){
     double val, power;
     int i, sign;
