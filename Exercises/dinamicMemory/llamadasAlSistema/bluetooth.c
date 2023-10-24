@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <string.h>
+#include <stdio.h>
 
 #define MAC_LENGTH 6
 
@@ -9,6 +10,7 @@ struct bluetooth_info
     unsigned int strength;
     char mac[MAC_LENGTH];
 };
+void print_structure(struct bluetooth_info *info);
 
 struct bluetooth_info info, *new_info;
 
@@ -30,6 +32,7 @@ int main(int argc, char **argv)
       info_ptr->mac[i] = 10;
     }
     new_info = duplicate(info_ptr);
+    print_structure(new_info);
     free(new_info);
 
     return 0;
@@ -61,4 +64,14 @@ struct bluetooth_info *duplicate(struct bluetooth_info *src_ptr)
 
     // Return the duplicated struct
     return result;
+}
+void print_structure(struct bluetooth_info *info){
+  printf("Name: %s\n", info -> name);
+  printf("Strength: %d\n", info -> strength);
+  printf("MAC: ");
+  for (int i = 0; i < MAC_LENGTH; i++) 
+  {
+    printf("%d ", info -> mac[i]);
+  }
+  printf("\n");
 }
