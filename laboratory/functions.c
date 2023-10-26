@@ -3,6 +3,7 @@
 #include <stdint.h>
 #include "functions.h"
 
+
 void read_print_header( FILE *file){
     uint16_t Magic_string ;
     uint32_t HeaderVars[3];
