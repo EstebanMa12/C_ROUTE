@@ -41,3 +41,23 @@ uint16_t le_h16(uint16_t value) {
     result |= ((value >> 8) & 0xFF);
     return result;
 }
+
+int* find_distinct(int* arr, int len, int* distinct_count) {
+  int* distinct_arr = malloc(len * sizeof(int));
+  int count = 0;
+  for (int i = 0; i < len; i++) {
+    int found = 0;
+    for (int j = 0; j < count; j++) {
+      if (arr[i] == distinct_arr[j]) {
+        found = 1;
+        break;
+      }
+    }
+    if (!found) {
+      distinct_arr[count] = arr[i];
+      count++;
+    }
+  }
+  *distinct_count = count;
+  return distinct_arr;
+}

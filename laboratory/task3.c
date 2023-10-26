@@ -37,6 +37,16 @@ int main(int argc, char *argv[])
   Enrollment enrollment[HeaderVars[2]];
   fread(&enrollment, sizeof(Enrollment),HeaderVars[2],file);
 
+   // Inicializar contadores
+  int pregrado_hombres = 0;  
+  int pregrado_mujeres = 0;  
+  int posgrado_hombres = 0;  
+  int posgrado_mujeres = 0;  
+
+  // Obtener años y semestres distintos
+//find_distinct
+  
+
 
   int distinct_years[10];
   int distinct_years_count = 0;
@@ -59,7 +69,7 @@ int main(int argc, char *argv[])
     }
   }
 
-  int distinct_semester[10];
+  int distinct_semester[4];
   int distinct_semester_count = 0;
   for (int i = 0; i < HeaderVars[2]; i++)
   {
@@ -79,6 +89,13 @@ int main(int argc, char *argv[])
       distinct_semester_count++;
     }
   }
+
+  for (int i = 0; i < distinct_years_count; i++)
+  {
+
+  }
+  
+
   
   // Print distinct years
   printf("Year  ");
