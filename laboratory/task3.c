@@ -59,27 +59,40 @@ int main(int argc, char *argv[])
     }
   }
 
-  int semester_count = 0;
-  for (int i = 0; i < distinct_years_count; i++)
+  int distinct_semester[10];
+  int distinct_semester_count = 0;
+  for (int i = 0; i < HeaderVars[2]; i++)
   {
-    for (int j = 0; j < HeaderVars[2]; j++)
+    int semester = enrollment[i].Semester;
+    int semester_found = 0;
+    for (int j = 0; j < distinct_semester_count; j++)
     {
-      if (enrollment[j].Year == distinct_years[i])
+      if (distinct_semester[j] == semester)
       {
-        int semester = enrollment[j].Semester;
-        int semester_found = 0;
-        printf("Semester: %d\n",semester);
+        semester_found = 1;
+        break;
       }
     }
-    
+    if (!semester_found)
+    {
+      distinct_semester[distinct_semester_count] = semester;
+      distinct_semester_count++;
+    }
   }
   
   // Print distinct years
-  // printf("Year  ");
-  // for (int i = 0; i < distinct_years_count; i++)
-  // {
-  //   printf("%d  ", distinct_years[i]);
-  // }
+  printf("Year  ");
+  for (int i = 0; i < distinct_years_count; i++)
+  {
+    printf("%d  ", distinct_years[i]);
+  }
+
+  // Print distinct semesters
+  printf("\nSemester  ");
+  for (int i = 0; i < distinct_semester_count; i++)
+  {
+    printf("%d  ", distinct_semester[i]);
+  }
   
 
   fclose(file);
