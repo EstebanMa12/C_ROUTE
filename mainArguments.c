@@ -10,17 +10,15 @@
 
 //  La variable argc como mínimo valdrá 1, ya que el nombre del programa se toma como primer argumento, almacenado con argv[0], que es el primer elemento de la matriz. Cada elemento del array apunta a un argumento de la línea de ódenes. Todos los argumentos de la línea de ordenes son cadenas.
 
-
 #include <stdio.h>
 #include <stdlib.h>
 int main(int argc, char *argv[])
 {
 
-if(argc!=2) {
-printf("Ha olvidado su nombre.\n");
-exit(1);
+  if (argc != 2)
+  {
+    printf("Ha olvidado su nombre.\n");
+    exit(1);
+  }
+  printf("Hola %s \n", argv[1]);
 }
-printf("Hola %s \n", argv[1]);
-}
-
- 
