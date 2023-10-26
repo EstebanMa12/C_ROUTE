@@ -4,28 +4,25 @@
 #include "functions.h"
 
 
-void read_print_header( FILE *file){
-    uint16_t Magic_string ;
-    uint32_t HeaderVars[3];
-    if(fread(&Magic_string, sizeof(Magic_string), 1, file )!=1){
-      printf("Error de lectura de la cabecera");
-      fclose(file);
-      return;
-    }
-    for (int i = 0; i < 3; i++)     
-    {
-      if (fread(&HeaderVars[i],sizeof(uint32_t),1,file)!=1)
-      {
+void read_print_header(FILE *file, uint16_t *Magic_string, uint32_t HeaderVars[3]) {
+    if (fread(Magic_string, sizeof(*Magic_string), 1, file) != 1) {
         printf("Error de lectura de la cabecera");
         fclose(file);
         return;
-      }
     }
-      // Magic_string = le_h16(Magic_string);
-      printf("Magic string: 0x%04X\n", Magic_string);
-      printf("Student count: %u\n", HeaderVars[0]); 
-      printf("Course count: %u\n", HeaderVars[1]); 
-      printf("Enrollment count: %u\n", HeaderVars[2]); 
+    for (int i = 0; i < 3; i++) {
+        if (fread(&HeaderVars[i], sizeof(uint32_t), 1, file) != 1) {
+            printf("Error de lectura de la cabecera");
+            fclose(file);
+            return;
+        }
+    }
+    // Magic_string = le_h16(Magic_string);
+    printf("Magic string: 0x%04X\n", *Magic_string);
+    printf("Student count: %u\n", HeaderVars[0]);
+    printf("Course count: %u\n", HeaderVars[1]);
+    printf("Enrollment count: %u\n", HeaderVars[2]);
+    printf("---------------------------------------------------\n");
 }
 
 uint32_t le_host(uint32_t value) {

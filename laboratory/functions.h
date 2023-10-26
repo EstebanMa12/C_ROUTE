@@ -13,7 +13,6 @@ typedef  struct {
 typedef struct 
 {
   uint32_t Course_id;
-  uint8_t Flags;
   char course_name[32];
   uint32_t credits;
 } Course;
@@ -25,7 +24,7 @@ typedef struct {
   uint32_t Semester;
 } Enrollment;
 
-void read_print_header( FILE *file);
+void read_print_header(FILE *file, uint16_t *Magic_string, uint32_t HeaderVars[3]);
 uint32_t le_host(uint32_t value) ;
 uint16_t le_h16(uint16_t value);
 uint16_t le_h16(uint16_t value) ;

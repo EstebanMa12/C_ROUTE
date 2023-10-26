@@ -18,10 +18,12 @@ int main(int argc, char *argv[]){
     printf("Error opening file\n");
     exit(1);
   }
+  uint16_t Magic_string;
+  uint32_t HeaderVars[3];
 
   //LEYENDO LA CABECERA:
-  read_print_header(file);
-  printf("----------------------------------------------\n");
+  read_print_header(file, &Magic_string, HeaderVars);
+
 
   // Tarea No. 1
   // Leer los datos de los estudiantes e e imprima los nombres, edades y géneros de todos los estudiantes dentro de un rango de edades. El rango de edades y el nombre del archivo binario se proporcionarán como argumentos de línea de comandos. El filtro de edades debe incluir los argumentos de límite superior e inferior.
