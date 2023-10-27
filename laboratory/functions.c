@@ -22,7 +22,7 @@ void read_print_header(FILE *file, uint16_t *Magic_string, uint32_t HeaderVars[3
     printf("Student count: %u\n", HeaderVars[0]);
     printf("Course count: %u\n", HeaderVars[1]);
     printf("Enrollment count: %u\n", HeaderVars[2]);
-    printf("---------------------------------------------------\n");
+    printf("-------------------------------------------------------------------------\n");
 }
 
 uint32_t le_host(uint32_t value) {
