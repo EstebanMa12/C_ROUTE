@@ -25,14 +25,14 @@ void read_print_header(FILE *file, uint16_t *Magic_string, uint32_t HeaderVars[3
     printf("-------------------------------------------------------------------------\n");
 }
 
-uint32_t le_host(uint32_t value) {
-    uint32_t result = 0;
-    result |= (value & 0xFF) << 24;
-    result |= ((value >> 8) & 0xFF) << 16;
-    result |= ((value >> 16) & 0xFF) << 8;
-    result |= ((value >> 24) & 0xFF);
-    return result;
-}
+// uint32_t le_host(uint32_t value) {
+//     uint32_t result = 0;
+//     result |= (value & 0xFF) << 24;
+//     result |= ((value >> 8) & 0xFF) << 16;
+//     result |= ((value >> 16) & 0xFF) << 8;
+//     result |= ((value >> 24) & 0xFF);
+//     return result;
+// }
 
 // Function to convert a little-endian uint16_t to a host-endian uint16_t
 uint16_t le_h16(uint16_t value) {
