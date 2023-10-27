@@ -93,16 +93,18 @@ int main(int argc, char *argv[])
     {
 
       int semester = distinct_semester[j];
+
+
       int maleUndergraduateCount = 0;
       int femaleUndergraduateCount = 0;
       int maleGraduateCount = 0;
       int femaleGraduateCount = 0;
 
       // Initializes all the values in the array to false using a for loop.
-      bool studentCounted[HeaderVars[0]];
+      int studentCounted[HeaderVars[0]];
       for (int k = 0; k < HeaderVars[0]; k++)
       {
-        studentCounted[k] = false;
+        studentCounted[k] = 0;
       }
 
       for (int k = 0; k < HeaderVars[2]; k++)
@@ -111,11 +113,11 @@ int main(int argc, char *argv[])
         {
           int student_id = enrollment[k].Student_id;
 
-          short int gender = (student[student_id].Flags >> 7) & 1;
-          short int level = (student[student_id].Flags >> 6) & 1;
+          short int gender = (student[student_id-1].Flags >> 7) & 1;
+          short int level = (student[student_id-1].Flags >> 6) & 1;
 
           // If the boolean value at the index student_id is false, the code inside the conditional statement will be executed.
-          if (!studentCounted[student_id])
+          if (!studentCounted[student_id-1])
           {
             if (level == 0)
             {
@@ -139,7 +141,7 @@ int main(int argc, char *argv[])
                 femaleGraduateCount++;
               }
             }
-            studentCounted[student_id] = true;
+            studentCounted[student_id-1] = 1;
           }
         }
       }
