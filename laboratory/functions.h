@@ -25,9 +25,9 @@ typedef struct {
 } Enrollment;
 
 void read_print_header(FILE *file, uint16_t *Magic_string, uint32_t HeaderVars[3]);
-uint32_t le_host(uint32_t value) ;
-uint16_t le_h16(uint16_t value);
-uint16_t le_h16(uint16_t value) ;
 
-int* find_distinct(int* arr, int len, int* distinct_count);
+//uint32_t le_host(uint32_t value) ;
+uint16_t le_h16(uint16_t value);
+
+//int* find_distinct(int* arr, int len, int* distinct_count);
 
