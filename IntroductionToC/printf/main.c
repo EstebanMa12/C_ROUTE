@@ -43,9 +43,9 @@ int main(void) {
     printf("El caracter es: %i\n",letra);
 
     int signedNum = -32;
-    printf("El numero es: %d\n",signedNum);
+    printf("El numero signed es: %d\n",signedNum);
     // El placeholder u imprime un número sin signo
-    printf("El numero es: %u\n",signedNum);
+    printf("El numero unsigned es: %u\n",signedNum);
     // Output: 4294967264  Lo que pasa es que lo convierte a un binario puro
     // y luego lo convierte a un número sin signo
     // complemento a2
@@ -54,6 +54,19 @@ int main(void) {
     // 32 = 4294967264
 
     long longNumber= 12345678979856451;
-    printf("El numero es: %ld\n",longNumber);
+    printf("El numero long es: %ld\n",longNumber);
+
+    float floatNumber = 123.456;
+    printf("El numero flotante es: %f\n",floatNumber);
+    // El placeholder e imprime un número en notación científica
+    printf("El numero con notación cientifica es: %e\n",floatNumber);
+    // El placeholder g imprime un número en notación científica o flotante
+    // Siempre busca la que mejor se le acomode. 
+    printf("El numero con notación cientifica o flotante es: %g\n",floatNumber);
+
+    // Uno de los placeholders más importantes puede ser el de números hexadecimales
+    // ya que es muy utilizado en la programación de bajo nivel
+    int hexNumber = 12345678;
+    printf("El numero hexadecimal es: %x\n",hexNumber);
 
 }
