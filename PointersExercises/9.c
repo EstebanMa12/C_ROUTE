@@ -13,3 +13,5 @@ my_struct.second_number = 0xAABBCCDD;
 
 printf("%02X", *(ptr + 7));
 }
+
+// Imprime FFFFFFAA

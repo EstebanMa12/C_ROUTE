@@ -20,9 +20,13 @@
 // %li imprime un valor de tipo entero largo
 // %hu imprime un valor de tipo entero corto sin signo
 // %hi imprime un valor de tipo entero corto
+// %X?
+
 
 // Por debajo printf() lo que hace es convertir todo a caracteres ASCII de una manera que sea coherente 
 // con el tipo de dato que se le pasa como argumento
+
+
 
 
 
