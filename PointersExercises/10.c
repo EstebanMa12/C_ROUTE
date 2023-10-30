@@ -14,5 +14,5 @@ int main() {
     s.b = 0x11923344;
     s.c = 0x8001;   
 
-    printf("%02X", (int)*(unsigned short*)(ptr + 5));
+    printf("%02X", (int)*(short*)(ptr + 5));
 }
