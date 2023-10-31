@@ -11,3 +11,4 @@ void imprimir_pointer(int *array, int *prt_size_array);
 int buscar(int *array, int *prt_size_array, int valor );
 
 int buscar2(int *array, int *prt_size_array, int valor );
+void actualizar(int *array, int *prt_size_array, int posicion, int valor);
